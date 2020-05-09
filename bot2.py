@@ -51,8 +51,13 @@ async def JobSearch (ctx,args1,args2):
 			company_elem = job_elem.find('div', class_ ='company')
 			location_elem = job_elem.find('div', class_ ='location')
 			if None in (title_elem, company_elem, location_elem):continue
-		response =title_elem.text.strip(), company_elem.text.strip(),location_elem.text.strip()
-                await ctx.send(response)
+		response1 = title_elem.text.strip()
+                response2 = company_elem.text.strip()
+                response3 = location_elem.text.strip()
+                await ctx.send(response1)
+                await ctx.send(response2)
+                await ctx.send(response3)
+
 
 		i=i+1
 	
