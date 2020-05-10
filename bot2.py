@@ -2,12 +2,14 @@ import re
 import random
 from discord.ext import commands
 from datetime import datetime
+from dotenv import load_dotenv
 import requests
 from bs4 import BeautifulSoup
 import argparse
 
-TOKEN =''
-GUILD =''
+load_dotenv()
+TOKEN = os.getenv('TOKEN')
+GUILD = os.getenv('GUILD')
 
 bot = commands.Bot(command_prefix="!")
 @bot.command (name='SEC', help = 'Responds with quote about Tennessee Football')
